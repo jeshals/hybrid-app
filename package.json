@@ -1,0 +1,17 @@
+{
+  "name": "Lens",
+  "version": "1.0.0",
+  "main": "index.html",
+  "engines": {
+    "node": "4.2.2",
+    "npm": "3.5.0"
+  },
+  "dependencies": {
+    "mime": "^1.3.4",
+    "node-gyp": "^3.2.1"
+  },
+  "window": {
+    "toolbar": false
+  },
+  "icon":"lens.png"
+}

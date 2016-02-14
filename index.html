@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Lens</title>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="app.css"/>
+    </head>
+    
+    <body>
+        <template id="photo-template">
+            <div class="photo col-sm-3">
+                <img />
+            </div>
+        </template>
+        
+        <div id="gridViewPhotos" class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="select_folder">
+                        <span>Select a folder containing photos</span>
+                    </div>
+                    
+                    <input type="file" nwsaveas id="photoSaver"/>
+                    
+                    <input type="file" nwdirectory id="folderSelector"/>
+        
+                    <div id="photos"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="fullViewPhoto" class="col-md-12">
+            <img id="fullPhoto"/>
+            
+            <div id="toolbar">
+                <div id="filterLabel">Filters</div>
+                
+                <div class="filter" onclick="applyFilter('original');" title="original">
+                    <img src="original.png" alt="original" />
+                </div>
+                
+                <div class="filter" onclick="applyFilter('grayscale');" title="grayscale">
+                    <img src="grayscale.png" alt="grayscale"/>
+                </div>
+                
+                <div class="filter" onclick="applyFilter('sepia');" title="sepia">
+                    <img src="sepia.png" alt="sepia"/>
+                </div>
+                
+                <div class="filter" onclick="applyFilter('sunburst');" title="sunburst">
+                    <img src="sunburst.png" alt="sunburst"/>
+                </div>
+                
+                <div class="filter" onclick="applyFilter('port');" title="port">
+                    <img src="port.png" alt="port"/>
+                </div>
+
+                <div id="back" class="button" onclick="backToGridView();">Back</div>
+                
+                <div id="save" class="button" onclick="saveToDisk();">Save as</div>
+            </div>
+        </div>
+    </body>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="scripts/caman.full.min.js"></script>
+    <script src="scripts/echo.min.js"></script>
+    <script src="app.js"></script>
+</html>
